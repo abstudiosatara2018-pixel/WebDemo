@@ -1,0 +1,317 @@
+:root {
+    --gold: #c9a24d;
+    --beige: #f5f1ea;
+    --dark: #222;
+    --purple: #4b2354;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Playfair Display', serif;
+}
+
+/* ================= HERO ================= */
+.contact-hero {
+    background: var(--beige);
+    text-align: center;
+    padding: 63px 20px;
+}
+
+.contact-hero h1 {
+    font-size: 40px;
+    margin: 0;
+}
+
+.contact-hero p {
+    margin-top: 10px;
+    color: #666;
+    font-size: 15px;
+}
+
+/* ================= MAIN LAYOUT ================= */
+.contact-form-wrapper {
+    max-width: 1300px;
+    margin: 60px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 650px 1fr;
+    gap: 60px;
+    align-items: stretch;
+}
+
+/* ================= LEFT CARDS ================= */
+.contact-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+    height: 500px;
+}
+
+.contact-cards .card {
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.contact-cards .card a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.contact-cards .card:hover {
+    transform: translateY(-5px);
+}
+
+.card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 20px;
+    border: 1px solid #eee;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card .number {
+    font-family: 'Poppins', sans-serif;
+}
+
+.card i {
+    font-size: 26px;
+    color: var(--gold);
+    margin-bottom: 10px;
+}
+
+.card h4 {
+    margin: 8px 0 4px;
+}
+
+.card p {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+}
+
+/* ================= FORM ================= */
+.enquiry-box {
+    background: #fff;
+    border: 2px solid #ddd;
+    border-radius: 28px;
+    padding: 30px;
+    height: 500px;
+    overflow-y: auto;
+}
+
+.enquiry-box h2 {
+    margin-bottom: 20px;
+}
+
+.form-box input,
+.form-box select,
+.form-box textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1.4px solid #ccc;
+    font-size: 14px;
+    margin-bottom: 14px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.form-box textarea {
+    height: 90px;
+    resize: none;
+}
+
+.submit-btn {
+    width: 100%;
+    height: 42px;
+    background: linear-gradient(to bottom right, #A3001E, #6F0014);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* ================= STORE ================= */
+.store-section {
+    max-width: 1300px;
+    margin: 80px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    padding: 0 20px;
+}
+
+.store-map iframe {
+    width: 100%;
+    height: 320px;
+    border-radius: 16px;
+    border: none;
+}
+
+.store-details h3 {
+    margin-top: 0;
+}
+
+/* ================= FAQ ================= */
+.faq-section {
+    max-width: 800px;
+    margin: 80px auto;
+    padding: 0 20px;
+}
+
+.faq-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.faq-question {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    background: #fff;
+    cursor: pointer;
+    text-align: left;
+    font-weight: 500;
+    transition: 0.2s ease;
+}
+
+.faq-question:hover {
+    background: #fafafa;
+}
+
+.faq-answer {
+    display: none;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-top: none;
+    background: #fff;
+}
+
+.faq-answer.open {
+    display: block;
+}
+
+/* ===== FLOATING WHATSAPP BUTTON ===== */
+.floating-whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 55px;
+    height: 55px;
+    background: #25D366;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    z-index: 99999;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.floating-whatsapp:hover {
+    transform: scale(1.1);
+}
+
+.floating-whatsapp {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
+    }
+
+    70% {
+        box-shadow: 0 0 0 12px rgba(37, 211, 102, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+
+/* ================= RESPONSIVE ================= */
+/* ================= RESPONSIVE FIX ================= */
+@media (max-width: 900px) {
+
+    /* Make wrapper single column */
+    .contact-form-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    /* Enquiry form first */
+    .enquiry-box {
+        order: 1;
+    }
+
+    /* Contact cards second */
+    .contact-cards {
+        order: 2;
+    }
+
+    /* MAIN WRAPPER */
+    .contact-form-wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        align-items: unset;
+    }
+
+    /* REMOVE FIXED HEIGHTS (VERY IMPORTANT) */
+    .contact-cards {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        height: auto;
+    }
+
+    .enquiry-box {
+        height: auto;
+        max-height: none;
+        overflow: visible;
+    }
+
+    /* STORE SECTION */
+    .store-section {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    /* FORM ROW FIX */
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    /* HERO TEXT SIZE */
+    .contact-hero h1 {
+        font-size: 28px;
+    }
+
+    /* CARD SPACING */
+    .card {
+        padding: 25px 20px;
+    }
+
+}
